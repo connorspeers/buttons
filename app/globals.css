@@ -1,0 +1,34 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+:root {
+  --gray-100: #EEEEEE;
+  --gray-700: #686D76;
+  --gray-900: #373A40;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: white;
+  color: var(--gray-900);
+}
+
+button {
+  border: 0;
+  color: inherit;
+  background: inherit;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}
