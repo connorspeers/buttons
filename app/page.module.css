@@ -4,11 +4,25 @@
   padding: 2rem;
 }
 
-.diamond {
+.box {
+  transition: all 0.4s;
   width: 42px;
   height: 42px;
-  margin: 7px;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
+  transform-origin: center;
   background: currentcolor;
-  border-radius: 7px;
+  border-radius: 23%;
+  cursor: pointer;
+}
+.box.opening,
+.box.open {
+  width: 25vw;
+  height: 25vw;
+}
+.box.open {
+  transition: none;
+}
+
+.words {
+  margin-left: 1.5rem;
 }

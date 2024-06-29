@@ -1,9 +1,21 @@
-import css from './page.module.css'
+'use client'
 
-const Home = () => (
-  <header className={css.header}>
-    <button className={css.diamond}></button>
-  </header>
-)
+import cx from 'classnames'
+
+import { Flyout } from './components/flyout'
+import styles from './page.module.css'
+
+const Home = () => {
+  return (
+    <header className={styles.header}>
+      <Flyout
+        render={({ status }) => (
+          <div className={cx(styles.box, styles[status])}></div>
+        )}
+      />
+      <h1 className={styles.words}>Words</h1>
+    </header>
+  )
+}
 
 export default Home
