@@ -3,24 +3,47 @@
 @tailwind utilities; */
 
 :root {
-  --gray-100: #EEEEEE;
-  --gray-700: #686D76;
-  --gray-900: #373A40;
+  --gray-400: #99999a;
+  --gray-500: #66666a;
+  --gray-600: #44444a;
+  --gray-900: #11111a;
+
+  --underline-color: rgba(255, 255, 255, 0.2);
+  --underline-color-hover: rgba(255, 255, 255, 0.4);
+
+  --fast: 0.13s;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: inherit;
 }
 
 html {
   font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.5;
 }
 
 body {
-  background: white;
-  color: var(--gray-900);
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: var(--gray-900);
+  color: var(--gray-400);
+}
+
+a {
+  transition: all var(--fast);
+  color: white;
+  text-decoration: underline var(--underline-color);
+}
+
+a:hover {
+  text-decoration-color: var(--underline-color-hover);
 }
 
 button {
@@ -29,6 +52,12 @@ button {
   background: inherit;
   cursor: pointer;
 }
+
 button:disabled {
   cursor: default;
+}
+
+s {
+  color: var(--gray-600);
+  text-decoration-color: var(--gray-500);
 }

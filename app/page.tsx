@@ -1,21 +1,14 @@
-'use client'
+import { Metadata } from 'next'
 
-import cx from 'classnames'
+import { Navigation } from './components/navigation'
 
-import { Flyout } from './components/flyout'
-import styles from './page.module.css'
-
-const Home = () => {
-  return (
-    <header className={styles.header}>
-      <Flyout
-        render={({ status }) => (
-          <div className={cx(styles.box, styles[status])}></div>
-        )}
-      />
-      <h1 className={styles.words}>Words</h1>
-    </header>
-  )
+export const metadata: Metadata = {
+  title: 'next demos',
+  description: 'i\'m sorry you had to see these',
 }
+
+const Home = () => (
+  <Navigation />
+)
 
 export default Home

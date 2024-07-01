@@ -1,0 +1,83 @@
+/* --- Diamond --- */
+
+.diamond {
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: rotate(45deg);
+  font-size: 0;
+  border-radius: 25%;
+  background: white;
+}
+
+.fullSpin {
+  animation: 0.75s ease-in-out fullSpin;
+}
+
+@keyframes fullSpin {
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+.halfSpin {
+  animation: 0.375s ease-in-out halfSpin;
+}
+
+@keyframes halfSpin {
+  to {
+    transform: rotate(135deg);
+  }
+}
+
+/* --- Navigation --- */
+
+.nav {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.header h1 {
+  display: none;
+}
+
+.header h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.main {
+  margin: auto;
+}
+
+.footer {
+  display: flex;
+  flex-flow: row-reverse;
+  margin-top: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+.footer * {
+  transition: all var(--fast);
+  opacity: 0.3;
+}
+
+.footer a {
+  text-decoration-color: var(--underline-color-hover);
+}
+
+.footer a:hover {
+  opacity: 1;
+}
+
+.footer a:hover ~ * {
+  opacity: 1;
+}
