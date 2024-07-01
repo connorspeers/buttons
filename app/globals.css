@@ -10,12 +10,11 @@
 }
 
 :root {
+  --gray-100: #fafafa;
   --gray-400: #99999a;
   --gray-500: #60606a;
   --gray-600: #44444a;
   --gray-900: #11111a;
-
-  --fast: 0.13s;
 
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -27,12 +26,12 @@ body {
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
-  background: var(--gray-900);
-  color: var(--gray-400);
+  background: var(--gray-100);
+  color: var(--gray-900);
 }
 
 a {
-  transition: all var(--fast);
+  transition: all 0.15s;
   color: white;
   text-decoration: underline var(--gray-500);
 }

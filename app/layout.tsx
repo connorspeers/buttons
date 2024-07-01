@@ -1,22 +1,10 @@
 import { Metadata } from 'next'
-// import { Inter } from 'next/font/google'
-import { ReactNode } from 'react'
 
 import './globals.css'
 
-// const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-  title: 'next-demos',
-  description: 'pizza',
+  title: 'demos',
+  description: 'i\'m sorry you had to see these',
 }
 
-const RootLayout = ({ children }: {
-  children: ReactNode
-}) => (
-  <html lang="en">
-    <body>{children}</body>
-  </html>
-)
-
-export default RootLayout
+export { DefaultLayout as default } from './layouts/default-layout'

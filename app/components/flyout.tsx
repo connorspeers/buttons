@@ -1,5 +1,7 @@
 'use client'
 
+// NOTE: this is just a poc, not currently being used
+
 import { useState, useRef, CSSProperties, ReactNode } from 'react'
 
 import { afterPaint } from '@/lib/client'
