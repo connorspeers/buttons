@@ -71,17 +71,19 @@
 
 .footer * {
   transition: all var(--fast);
-  opacity: 0.3;
+  opacity: 0.25;
 }
 
 .footer a {
   text-decoration-color: var(--underline-color-hover);
 }
 
-.footer a:hover {
+.footer a:hover,
+.footer a:focus {
   opacity: 1;
 }
 
-.footer a:hover ~ * {
+.footer a:hover ~ *,
+.footer a:focus ~ * {
   opacity: 1;
 }

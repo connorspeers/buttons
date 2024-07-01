@@ -1,23 +1,30 @@
 'use client'
 
+import cx from 'classnames'
+import { useState } from 'react'
+
 import styles from './navigation.module.css'
 
-const Diamond = () => (
-  <button
-    className={styles.diamond}
-    onClick={(evt) => {
-      if (!evt.currentTarget || evt.currentTarget.classList.contains(styles.fullSpin)) {
-        return
-      }
+const Diamond = () => {
+  const [fullSpin, setFullSpin] = useState(false)
+  const [reverse, setReverse] = useState(false)
 
-      evt.currentTarget.classList.add(styles.fullSpin)
-      evt.currentTarget.addEventListener('animationend', () => {
-        evt.currentTarget?.classList.remove(styles.fullSpin)
-        evt.currentTarget?.classList.toggle(styles.reverse)
-      })
-    }}
-  >this button does nothing</button>
-)
+  return (
+    <button
+      className={cx(styles.diamond, {
+        [styles.fullSpin]: fullSpin,
+        [styles.reverse]: reverse,
+      })}
+      onClick={(evt) => {
+        setFullSpin(true)
+        evt.target.addEventListener('animationend', () => {
+          setFullSpin(false)
+          setReverse(!reverse)
+        })
+      }}
+    >this button does nothing</button>
+  )
+}
 
 export const Navigation = () => {
   return (

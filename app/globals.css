@@ -42,7 +42,8 @@ a {
   text-decoration: underline var(--underline-color);
 }
 
-a:hover {
+a:hover,
+a:focus {
   text-decoration-color: var(--underline-color-hover);
 }
 
