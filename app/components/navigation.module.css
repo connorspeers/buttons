@@ -1,6 +1,7 @@
 /* --- Diamond --- */
 
 .diamond {
+  transition: all 0.75s ease-in-out;
   width: 1.5rem;
   height: 1.5rem;
   transform: rotate(45deg);
@@ -9,28 +10,12 @@
   background: white;
 }
 
-.fullSpin {
-  animation: 0.75s ease-in-out fullSpin;
+.diamond.rotate180 {
+  transform: rotate(225deg);
 }
 
-@keyframes fullSpin {
-  to {
-    transform: rotate(405deg);
-  }
-}
-
-.halfSpin {
-  animation: 0.375s ease-in-out halfSpin;
-}
-
-@keyframes halfSpin {
-  to {
-    transform: rotate(135deg);
-  }
-}
-
-.reverse {
-  animation-direction: reverse;
+.diamond.rotate360 {
+  transform: rotate(405deg);
 }
 
 /* --- Navigation --- */

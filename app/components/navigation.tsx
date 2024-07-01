@@ -6,20 +6,21 @@ import { useState } from 'react'
 import styles from './navigation.module.css'
 
 const Diamond = () => {
-  const [fullSpin, setFullSpin] = useState(false)
-  const [reverse, setReverse] = useState(false)
+  // const [rotate180, setRotate180] = useState(false)
+  const [rotate360, setRotate360] = useState(false)
 
   return (
     <button
       className={cx(styles.diamond, {
-        [styles.fullSpin]: fullSpin,
-        [styles.reverse]: reverse,
+        // [styles.rotate180]: rotate180,
+        [styles.rotate360]: rotate360,
       })}
       onClick={(evt) => {
-        setFullSpin(true)
-        evt.target.addEventListener('animationend', () => {
-          setFullSpin(false)
-          setReverse(!reverse)
+        // setRotate180(true)
+        setRotate360(true)
+        evt.target.addEventListener('transitionend', () => {
+          // setRotate180(false)
+          setRotate360(false)
         })
       }}
     >this button does nothing</button>
