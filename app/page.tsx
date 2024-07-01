@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { Navigation } from './components/navigation'
 
 export const metadata: Metadata = {
-  title: 'next demos',
+  title: 'demos',
   description: 'i\'m sorry you had to see these',
 }
 
