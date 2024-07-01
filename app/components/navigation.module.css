@@ -29,6 +29,10 @@
   }
 }
 
+.reverse {
+  animation-direction: reverse;
+}
+
 /* --- Navigation --- */
 
 .nav {

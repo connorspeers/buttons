@@ -6,14 +6,14 @@ const Diamond = () => (
   <button
     className={styles.diamond}
     onClick={(evt) => {
-      const button = evt.currentTarget
-      if (!button || button.classList.contains(styles.fullSpin)) {
+      if (!evt.currentTarget || evt.currentTarget.classList.contains(styles.fullSpin)) {
         return
       }
 
-      button.classList.add(styles.fullSpin)
-      button.addEventListener('animationend', () => {
-        button.classList.remove(styles.fullSpin)
+      evt.currentTarget.classList.add(styles.fullSpin)
+      evt.currentTarget.addEventListener('animationend', () => {
+        evt.currentTarget?.classList.remove(styles.fullSpin)
+        evt.currentTarget?.classList.toggle(styles.reverse)
       })
     }}
   >this button does nothing</button>
