@@ -56,7 +56,7 @@
 
 .footer * {
   transition: all var(--fast);
-  opacity: 0.25;
+  opacity: 0.3;
 }
 
 .footer a {
