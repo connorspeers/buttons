@@ -1,1 +1,7 @@
-export { HomePage as default } from './pages/home-page'
+const HomePage = () => {
+  return (
+    <main></main>
+  )
+}
+
+export default HomePage
