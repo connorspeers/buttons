@@ -6,7 +6,6 @@ import { createContext, useContext, useRef, useState } from 'react'
 import { ButtonsNavLink } from '@/buttons/buttons-nav-link'
 import { spin } from '@/lib/client'
 import styles from './navigation.module.css'
-import Link from 'next/link'
 
 export type NavigationState = {
   open: boolean
@@ -78,7 +77,7 @@ export const Navigation = () => {
       ></button>
       <div className={styles.menu}>
         <header className={styles.header}>
-          <p>vandalized by <Link href="/">connor</Link></p>
+          <p>vandalized by <a href="https://github.com/connorspeers/buttons" target="_blank">connor</a></p>
         </header>
         <section className={styles.links}>
           <ButtonsNavLink />
