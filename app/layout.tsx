@@ -1,10 +1,26 @@
 import { Metadata } from 'next'
 
 import './globals.css'
+import { Navigation, NavigationProvider } from './components/navigation'
 
 export const metadata: Metadata = {
   title: 'demos',
-  description: 'i\'m sorry you had to see these',
+  description: 'random web experiments',
 }
 
-export { DefaultLayout as default } from './layouts/default-layout'
+const RootLayout = ({ children }: {
+  children: React.ReactNode
+}) => {
+  return (
+    <html lang="en">
+      <body>
+        <NavigationProvider>
+          <Navigation />
+          {children}
+        </NavigationProvider>
+      </body>
+    </html>
+  )
+}
+
+export default RootLayout

@@ -1,0 +1,20 @@
+.main {
+  animation: 0.3s ease-in-out 0s fadein;
+  flex: 1;
+  position: relative;
+  max-width: 600rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 8rem 0;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

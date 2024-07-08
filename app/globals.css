@@ -1,7 +1,3 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
 * {
   margin: 0;
   padding: 0;
@@ -10,11 +6,15 @@
 }
 
 :root {
-  --gray-100: #fafafa;
-  --gray-400: #99999a;
-  --gray-500: #60606a;
-  --gray-600: #44444a;
-  --gray-900: #11111a;
+  --gray-100: #fafaf9;
+  --gray-200: #eeeee9;
+  --gray-300: #ccccc9;
+  --gray-400: #999999;
+  --gray-500: #606069;
+  --gray-600: #444449;
+  --gray-700: #333339;
+  --gray-800: #222229;
+  --gray-900: #111119;
 
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -26,8 +26,8 @@ body {
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
-  background: var(--gray-100);
-  color: var(--gray-900);
+  background: var(--gray-900);
+  color: var(--gray-400);
 }
 
 a {
@@ -46,6 +46,7 @@ button {
   color: inherit;
   background: inherit;
   cursor: pointer;
+  font: inherit;
 }
 
 button:disabled {

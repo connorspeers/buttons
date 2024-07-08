@@ -1,0 +1,18 @@
+.wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  pointer-events: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.wrap.launched {
+  transition: all 1s, opacity 0.75s 0.25s;
+  top: -8rem;
+  opacity: 0;
+}
