@@ -8,7 +8,7 @@ export type ButtonProps = Omit<LinkProps, 'href'> & {
 }
 
 export const Button = forwardRef(
-  ({ href, children, ...props }: ButtonProps, ref: React.ForwardedRef<Element>) => {
+  function Button({ href, children, ...props }: ButtonProps, ref: React.ForwardedRef<Element>) {
     return href !== undefined ? (
       <Link
         ref={ref as React.ForwardedRef<HTMLAnchorElement>}

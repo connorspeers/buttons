@@ -19,10 +19,12 @@ export const useFireworks = (): FireworksSlice => {
   const [launched, setLaunched] = useState(false)
 
   useEffect(() => {
+    const root = rootRef.current
+    if (!root) return
     if (launched) {
       const off = () => setLaunched(false)
-      rootRef.current?.addEventListener('transitionend', off, { once: true })
-      return () => rootRef.current?.removeEventListener('transitionend', off)
+      root.addEventListener('transitionend', off, { once: true })
+      return () => root.removeEventListener('transitionend', off)
     }
   }, [launched])
 

@@ -77,12 +77,12 @@ export const ParticleButton = ({
 
   const handleClick = (evt: React.MouseEvent) => {
     if (triggerOnClick) trigger()
-    onClick?.(evt)
+    onClick?.(evt as React.MouseEvent<HTMLAnchorElement>) // TODO: Technically, it's not an anchor
   }
 
   const handleMouseEnter = (evt: React.MouseEvent) => {
     if (triggerOnHover) trigger()
-    onMouseEnter?.(evt)
+    onMouseEnter?.(evt as React.MouseEvent<HTMLAnchorElement>)
   }
 
   return (
